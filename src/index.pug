@@ -1,0 +1,195 @@
+- var title = 'School'
+
+doctype html
+html(lang="en")
+	include html/_head
+	body 
+		.wrapper 
+			include html/_header 
+			main.page 
+				section.page__main.main 
+					.main__container 
+						.main__content
+							h1.main__title Настоящая школа 
+								span у вас дома!
+							.main__body 
+								p Мы даем детям реальные знания, потому наши классы не превышают 10 человек. А интерактивность и вовлеченность делает уроки интересными для детей.
+								p.main__important Семейное образование с нами - это эффективно!
+								a(href="#").main__button.button 
+									span Записаться на урок
+								.main__social.social 
+									.social__text или написать: 
+									ul.social__list 
+										li.social__item 
+											a(href="#").social__link.social__link_telegram
+										li.social__item 
+											a(href="#").social__link.social__link_whatsapp 
+						.main__image.image-main 
+							.image-main__item.image-main__item_background
+								img(src="@img/main/main-background.png", alt="background")
+							.image-main__item.image-main__item_table
+								img(src="@img/main/main-table.png", alt="table")
+							.image-main__item.image-main__item_computer
+								img(src="@img/main/main-computer.png", alt="computer")
+							.image-main__item.image-main__item_tv
+								img(src="@img/main/main-tv.png", alt="tv")
+							.image-main__item.image-main__item_paper
+								img(src="@img/main/main-paper.png", alt="paper")
+							.image-main__item.image-main__item_mobile1
+								img(src="@img/main/main-mobile1.png", alt="mobile1")
+							.image-main__item.image-main__item_mobile2
+								img(src="@img/main/main-mobile2.png", alt="mobile2")
+				section.page__whom.whom 
+					.whom__container 
+						.whom__title.title Кому подходит онлайн образование?
+						.whom__content 
+							.whom__item 
+								.whom__image 
+									img(src="@img/whom/icon1.png", alt="icon1")
+								.whom__text Для тех, кто хочет получать знания
+							.whom__item 
+								.whom__image 
+									img(src="@img/whom/icon2.png", alt="icon2")
+								.whom__text Для путешественников
+							.whom__item 
+								.whom__image 
+									img(src="@img/whom/icon3.png", alt="icon3")
+								.whom__text Для семейного обучения
+							.whom__item 
+								.whom__image 
+									img(src="@img/whom/icon4.png", alt="icon4")
+								.whom__text Для спортсменов
+							.whom__item 
+								.whom__image 
+									img(src="@img/whom/icon5.png", alt="icon5")
+								.whom__text Для проживающих за рубежом
+						.whom__price.price-whom
+							.price-whom__image 
+								img(src="@img/whom/girl.png", alt="girl")
+							.price-whom__action.action 
+								.action__title Первый месяц обучения от 5&nbsp;250 руб
+								.action__text Не знаете подойдет ли вашему ребенку обучение онлайн? Попробуйте первый месяц со скидкой 50%!
+							.price-whom__order
+								a(href="#").price-whom__button.main__button.button 
+									span Записаться на урок
+								.price-whom__social.main__social.social 
+									.social__text или написать: 
+									ul.social__list 
+										li.social__item 
+											a(href="#").social__link.social__link_telegram
+										li.social__item 
+											a(href="#").social__link.social__link_whatsapp 
+				section.page__how.how 
+					.how__container 
+						.how__title.title Как проходят уроки в нашей онлайн школе?
+						.how__body 
+							.how__item 
+								.how__image 
+									img(src="@img/how/icon2.png", alt="how icon 2")
+								.how__content 
+									.how__label Живые уроки с учителем
+									.how__text Увлекательные уроки с учителем, на которых каждому ребенку будет уделено внимание
+							.how__item.how__item_even
+								.how__image 
+									img(src="@img/how/icon3.png", alt="how icon 3")
+								.how__content 
+									.how__label Дополнительные материалы
+									.how__text Материалы по каждой теме без лишней воды помогут закрепить знания
+							.how__item 
+								.how__image 
+									img(src="@img/how/icon4.png", alt="how icon 4")
+								.how__content 
+									.how__label Домашнее задание
+									.how__text Для закрепления всего ранее полученного материала дети получают домашнее задание
+							.how__item.how__item_even
+								.how__image 
+									img(src="@img/how/icon1.png", alt="how icon 1")
+								.how__content 
+									.how__label Проверка и оценка
+									.how__text Все домашние задания проверяются учителем и выставляется оценка в дневник
+				section.page__why.why 
+					.why__container 
+						.why__title.title Дети любят наши уроки потому что:
+						.why__body.tabs-why(data-tabs)
+							.why__content
+								nav.tabs-why__navigation(data-tabs-titles)
+									._tab-active.tabs-why__title.tabs-title 
+										.tabs-title__label Продвинутая геймификация 
+										.tabs-title__text Мы используем мини-игры чтобы увлечь ребенка в процесс решения задач и помочь усвоить материал в интересной форме
+									.tabs-why__title.tabs-title 
+										.tabs-title__label Не зубрят и не переписывают учебники
+										.tabs-title__text Дети вовлечены в урок по средствам взаимодействия между собой и педагогом. Играют в тематические квизы. Смотрят видео и разбирают материал.
+									.tabs-why__title.tabs-title 
+										.tabs-title__label Никакого стресса
+										.tabs-title__text В учебных классах поддерживается атмосфера дружбы и уважения. Никакого давления. Дети чувствуют себя комфортно
+								.why__order 
+									a(href="#").why__button.main__button.button 
+										span Записаться на урок
+									.why__social.main__social.social 
+										.social__text или написать: 
+										ul.social__list 
+											li.social__item 
+												a(href="#").social__link.social__link_telegram
+											li.social__item 
+												a(href="#").social__link.social__link_whatsapp
+							.tabs-why__content(data-tabs-body)
+								.tabs-why__body.tabs-body 
+									.tabs-body__images 
+										.tabs-body__image.tabs-body__image_background 
+											img(src="@img/why/tab1/why-background.png", alt="why-background") 
+										.tabs-body__image.tabs-body__image_tablet 
+											img(src="@img/why/tab1/why-tablet.png", alt="why-tablet") 
+										.tabs-body__image.tabs-body__image_calculator 
+											img(src="@img/why/tab1/why-calculator.png", alt="why-calculator") 
+										.tabs-body__image.tabs-body__image_calendar 
+											img(src="@img/why/tab1/why-calendar.png", alt="why-calendar") 
+										.tabs-body__image.tabs-body__image_note 
+											img(src="@img/why/tab1/why-note.png", alt="why-note") 
+										.tabs-body__image.tabs-body__image_pencil 
+											img(src="@img/why/tab1/why-pencil.png", alt="why-pencil") 
+										.tabs-body__image.tabs-body__image_ruler 
+											img(src="@img/why/tab1/why-ruler.png", alt="why-ruler") 
+								.tabs-why__body.tabs-body 
+									.tabs-body__images 
+										.tabs-body__image.tabs-body__image_background2 
+											img(src="@img/why/tab1/why-background.png", alt="why-backgound2") 
+										.tabs-body__image.tabs-body__image_atom 
+											img(src="@img/why/tab2/why-atom.png", alt="why-atom")
+										.tabs-body__image.tabs-body__image_flask 
+											img(src="@img/why/tab2/why-flask.png", alt="why-flask")
+										.tabs-body__image.tabs-body__image_kid1 
+											img(src="@img/why/tab2/why-kid1.png", alt="why-kid1")
+										.tabs-body__image.tabs-body__image_kid2 
+											img(src="@img/why/tab2/why-kid2.png", alt="why-kid2")
+										.tabs-body__image.tabs-body__image_kid3 
+											img(src="@img/why/tab2/why-kid3.png", alt="why-kid3")
+										.tabs-body__image.tabs-body__image_kid4 
+											img(src="@img/why/tab2/why-kid4.png", alt="why-kid4")
+										.tabs-body__image.tabs-body__image_kid5 
+											img(src="@img/why/tab2/why-kid5.png", alt="why-kid5")
+										.tabs-body__image.tabs-body__image_kid6 
+											img(src="@img/why/tab2/why-kid6.png", alt="why-kid6")
+										.tabs-body__image.tabs-body__image_lamp 
+											img(src="@img/why/tab2/why-lamp.png", alt="why-lamp")
+								.tabs-why__body.tabs-body 
+									.tabs-body__images 
+										.tabs-body__image.tabs-body__image_background3 
+											img(src="@img/why/tab3/why-background.png", alt="why-backgound3") 
+										.tabs-body__image.tabs-body__image_kid8-1 
+											img(src="@img/why/tab3/why-kid8.png", alt="why-kid8_1")
+										.tabs-body__image.tabs-body__image_kid7-1 
+											img(src="@img/why/tab3/why-kid7.png", alt="why-kid7_1")
+										.tabs-body__image.tabs-body__image_kid1-1 
+											img(src="@img/why/tab3/why-kid1.png", alt="why-kid1_1")
+										.tabs-body__image.tabs-body__image_kid2-1 
+											img(src="@img/why/tab3/why-kid2.png", alt="why-kid2_1")
+										.tabs-body__image.tabs-body__image_kid3-1 
+											img(src="@img/why/tab3/why-kid3.png", alt="why-kid3_1")
+										.tabs-body__image.tabs-body__image_kid4-1 
+											img(src="@img/why/tab3/why-kid4.png", alt="why-kid4_1")
+										.tabs-body__image.tabs-body__image_kid5-1 
+											img(src="@img/why/tab3/why-kid5.png", alt="why-kid5_1")
+										.tabs-body__image.tabs-body__image_kid6-1 
+											img(src="@img/why/tab3/why-kid6.png", alt="why-kid6_1")
+			include html/_footer 
+		//- include html/_popup 

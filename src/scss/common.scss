@@ -1,0 +1,31 @@
+// Заголовки, общие БЄМ блоки и проче...
+//====================================================================================================
+.button {
+    color: $color1;
+    background: linear-gradient(272.77deg, #864FF1 0%, #49B3F7 100%);
+    box-shadow: 0px 6px 21px rgba(104, 130, 245, 0.67);
+    opacity: 1;
+    border-radius: 90px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-transform: uppercase;
+    letter-spacing: 0.125em;
+    padding: rem(22) rem(30);
+    @include adaptiveValue("padding-top", 22, 18, $maxWidthContainer, 767.98, 1);
+    @include adaptiveValue("padding-bottom", 22, 18, $maxWidthContainer, 767.98, 1);
+    @include adaptiveValue("padding-left", 30, 20, $maxWidthContainer, 767.98, 1);
+    @include adaptiveValue("padding-right", 30, 20, $maxWidthContainer, 767.98, 1);
+    transition: all 0.3s ease 0s;
+    @media(any-hover) {
+        &:hover {
+            opacity: 0.8;
+        }
+    }
+}
+//====================================================================================================
+.title {
+    font-family: "ALSSchlangesans";
+    line-height: 103%;
+    @include adaptiveValue("font-size", 50, 20);
+}

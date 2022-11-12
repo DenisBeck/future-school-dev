@@ -110,18 +110,80 @@ html(lang="en")
 				section.page__why.why 
 					.why__container 
 						.why__title.title Дети любят наши уроки потому что:
-						.why__body.tabs-why(data-tabs)
+						.why__body.tabs-why
 							.why__content
-								nav.tabs-why__navigation(data-tabs-titles)
-									._tab-active.tabs-why__title.tabs-title 
-										.tabs-title__label Продвинутая геймификация 
-										.tabs-title__text Мы используем мини-игры чтобы увлечь ребенка в процесс решения задач и помочь усвоить материал в интересной форме
-									.tabs-why__title.tabs-title 
-										.tabs-title__label Не зубрят и не переписывают учебники
-										.tabs-title__text Дети вовлечены в урок по средствам взаимодействия между собой и педагогом. Играют в тематические квизы. Смотрят видео и разбирают материал.
-									.tabs-why__title.tabs-title 
-										.tabs-title__label Никакого стресса
-										.tabs-title__text В учебных классах поддерживается атмосфера дружбы и уважения. Никакого давления. Дети чувствуют себя комфортно
+								nav.tabs-why__navigation.spollers(data-spollers, data-one-spoller)
+									.tabs-images
+									.spollers__item.tabs-title
+										.tabs-why__title.spollers__title._spoller-active(data-spoller) 
+											.tabs-title__label Продвинутая геймификация 
+											.tabs-title__text Мы используем мини-игры чтобы увлечь ребенка в процесс решения задач и помочь усвоить материал в интересной форме
+										.tabs-why__body.tabs-body.spollers__body 
+											.tabs-body__images 
+												.tabs-body__image.tabs-body__image_background 
+													img(src="@img/why/tab1/why-background.png", alt="why-background") 
+												.tabs-body__image.tabs-body__image_tablet 
+													img(src="@img/why/tab1/why-tablet.png", alt="why-tablet") 
+												.tabs-body__image.tabs-body__image_calculator 
+													img(src="@img/why/tab1/why-calculator.png", alt="why-calculator") 
+												.tabs-body__image.tabs-body__image_calendar 
+													img(src="@img/why/tab1/why-calendar.png", alt="why-calendar") 
+												.tabs-body__image.tabs-body__image_note 
+													img(src="@img/why/tab1/why-note.png", alt="why-note") 
+												.tabs-body__image.tabs-body__image_pencil 
+													img(src="@img/why/tab1/why-pencil.png", alt="why-pencil") 
+												.tabs-body__image.tabs-body__image_ruler 
+													img(src="@img/why/tab1/why-ruler.png", alt="why-ruler") 
+									.spollers__item.tabs-title
+										.tabs-why__title.spollers__title(data-spoller) 
+											.tabs-title__label Не зубрят и не переписывают учебники
+											.tabs-title__text Дети вовлечены в урок по средствам взаимодействия между собой и педагогом. Играют в тематические квизы. Смотрят видео и разбирают материал.
+										.tabs-why__body.tabs-body.spollers__body 
+											.tabs-body__images 
+												.tabs-body__image.tabs-body__image_background2 
+													img(src="@img/why/tab1/why-background.png", alt="why-backgound2") 
+												.tabs-body__image.tabs-body__image_atom 
+													img(src="@img/why/tab2/why-atom.png", alt="why-atom")
+												.tabs-body__image.tabs-body__image_flask 
+													img(src="@img/why/tab2/why-flask.png", alt="why-flask")
+												.tabs-body__image.tabs-body__image_kid1 
+													img(src="@img/why/tab2/why-kid1.png", alt="why-kid1")
+												.tabs-body__image.tabs-body__image_kid2 
+													img(src="@img/why/tab2/why-kid2.png", alt="why-kid2")
+												.tabs-body__image.tabs-body__image_kid3 
+													img(src="@img/why/tab2/why-kid3.png", alt="why-kid3")
+												.tabs-body__image.tabs-body__image_kid4 
+													img(src="@img/why/tab2/why-kid4.png", alt="why-kid4")
+												.tabs-body__image.tabs-body__image_kid5 
+													img(src="@img/why/tab2/why-kid5.png", alt="why-kid5")
+												.tabs-body__image.tabs-body__image_kid6 
+													img(src="@img/why/tab2/why-kid6.png", alt="why-kid6")
+												.tabs-body__image.tabs-body__image_lamp 
+													img(src="@img/why/tab2/why-lamp.png", alt="why-lamp")
+									.spollers__item.tabs-title
+										.tabs-why__title.spollers__title(data-spoller) 
+											.tabs-title__label Никакого стресса
+											.tabs-title__text В учебных классах поддерживается атмосфера дружбы и уважения. Никакого давления. Дети чувствуют себя комфортно
+										.tabs-why__body.tabs-body.spollers__body 
+											.tabs-body__images 
+												.tabs-body__image.tabs-body__image_background3 
+													img(src="@img/why/tab3/why-background.png", alt="why-backgound3") 
+												.tabs-body__image.tabs-body__image_kid8-1 
+													img(src="@img/why/tab3/why-kid8.png", alt="why-kid8_1")
+												.tabs-body__image.tabs-body__image_kid7-1 
+													img(src="@img/why/tab3/why-kid7.png", alt="why-kid7_1")
+												.tabs-body__image.tabs-body__image_kid1-1 
+													img(src="@img/why/tab3/why-kid1.png", alt="why-kid1_1")
+												.tabs-body__image.tabs-body__image_kid2-1 
+													img(src="@img/why/tab3/why-kid2.png", alt="why-kid2_1")
+												.tabs-body__image.tabs-body__image_kid3-1 
+													img(src="@img/why/tab3/why-kid3.png", alt="why-kid3_1")
+												.tabs-body__image.tabs-body__image_kid4-1 
+													img(src="@img/why/tab3/why-kid4.png", alt="why-kid4_1")
+												.tabs-body__image.tabs-body__image_kid5-1 
+													img(src="@img/why/tab3/why-kid5.png", alt="why-kid5_1")
+												.tabs-body__image.tabs-body__image_kid6-1 
+													img(src="@img/why/tab3/why-kid6.png", alt="why-kid6_1")
 								.why__order 
 									a(href="#").why__button.main__button.button 
 										span Записаться на урок
@@ -132,64 +194,44 @@ html(lang="en")
 												a(href="#").social__link.social__link_telegram
 											li.social__item 
 												a(href="#").social__link.social__link_whatsapp
-							.tabs-why__content(data-tabs-body)
-								.tabs-why__body.tabs-body 
-									.tabs-body__images 
-										.tabs-body__image.tabs-body__image_background 
-											img(src="@img/why/tab1/why-background.png", alt="why-background") 
-										.tabs-body__image.tabs-body__image_tablet 
-											img(src="@img/why/tab1/why-tablet.png", alt="why-tablet") 
-										.tabs-body__image.tabs-body__image_calculator 
-											img(src="@img/why/tab1/why-calculator.png", alt="why-calculator") 
-										.tabs-body__image.tabs-body__image_calendar 
-											img(src="@img/why/tab1/why-calendar.png", alt="why-calendar") 
-										.tabs-body__image.tabs-body__image_note 
-											img(src="@img/why/tab1/why-note.png", alt="why-note") 
-										.tabs-body__image.tabs-body__image_pencil 
-											img(src="@img/why/tab1/why-pencil.png", alt="why-pencil") 
-										.tabs-body__image.tabs-body__image_ruler 
-											img(src="@img/why/tab1/why-ruler.png", alt="why-ruler") 
-								.tabs-why__body.tabs-body 
-									.tabs-body__images 
-										.tabs-body__image.tabs-body__image_background2 
-											img(src="@img/why/tab1/why-background.png", alt="why-backgound2") 
-										.tabs-body__image.tabs-body__image_atom 
-											img(src="@img/why/tab2/why-atom.png", alt="why-atom")
-										.tabs-body__image.tabs-body__image_flask 
-											img(src="@img/why/tab2/why-flask.png", alt="why-flask")
-										.tabs-body__image.tabs-body__image_kid1 
-											img(src="@img/why/tab2/why-kid1.png", alt="why-kid1")
-										.tabs-body__image.tabs-body__image_kid2 
-											img(src="@img/why/tab2/why-kid2.png", alt="why-kid2")
-										.tabs-body__image.tabs-body__image_kid3 
-											img(src="@img/why/tab2/why-kid3.png", alt="why-kid3")
-										.tabs-body__image.tabs-body__image_kid4 
-											img(src="@img/why/tab2/why-kid4.png", alt="why-kid4")
-										.tabs-body__image.tabs-body__image_kid5 
-											img(src="@img/why/tab2/why-kid5.png", alt="why-kid5")
-										.tabs-body__image.tabs-body__image_kid6 
-											img(src="@img/why/tab2/why-kid6.png", alt="why-kid6")
-										.tabs-body__image.tabs-body__image_lamp 
-											img(src="@img/why/tab2/why-lamp.png", alt="why-lamp")
-								.tabs-why__body.tabs-body 
-									.tabs-body__images 
-										.tabs-body__image.tabs-body__image_background3 
-											img(src="@img/why/tab3/why-background.png", alt="why-backgound3") 
-										.tabs-body__image.tabs-body__image_kid8-1 
-											img(src="@img/why/tab3/why-kid8.png", alt="why-kid8_1")
-										.tabs-body__image.tabs-body__image_kid7-1 
-											img(src="@img/why/tab3/why-kid7.png", alt="why-kid7_1")
-										.tabs-body__image.tabs-body__image_kid1-1 
-											img(src="@img/why/tab3/why-kid1.png", alt="why-kid1_1")
-										.tabs-body__image.tabs-body__image_kid2-1 
-											img(src="@img/why/tab3/why-kid2.png", alt="why-kid2_1")
-										.tabs-body__image.tabs-body__image_kid3-1 
-											img(src="@img/why/tab3/why-kid3.png", alt="why-kid3_1")
-										.tabs-body__image.tabs-body__image_kid4-1 
-											img(src="@img/why/tab3/why-kid4.png", alt="why-kid4_1")
-										.tabs-body__image.tabs-body__image_kid5-1 
-											img(src="@img/why/tab3/why-kid5.png", alt="why-kid5_1")
-										.tabs-body__image.tabs-body__image_kid6-1 
-											img(src="@img/why/tab3/why-kid6.png", alt="why-kid6_1")
+							.why__image-block 
+				section.page__compare.compare 
+					.compare__container 
+						.compare__title.title Глянем сравнение:
+						.compare__body 
+							.compare__image.compare__image_left 
+								img(src="@img/compare/01.png", alt="compare boy 1")
+							.compare__text.text-compare.compare__text_left 
+								.text-compare__title Обычная школа
+								ul.text-compare__list 
+									li.text-compare__item Число детей в классе
+										span от 25
+									li.text-compare__item Количество уроков
+										span 5-6 в день
+									li.text-compare__item Дополнительные занятия
+										span обязательно
+									li.text-compare__item Индивидуальный подход
+										span нет
+									li.text-compare__item Гибкий график занятий
+										span нет
+									li.text-compare__item Собрать ребенка в школу
+										span от 30 тыс. рублей
+							.compare__text.text-compare.compare__text_right
+								.text-compare__title Онлайн школа
+								ul.text-compare__list 
+									li.text-compare__item Число детей в классе
+										span до 12
+									li.text-compare__item Количество уроков
+										span 2-3 в день
+									li.text-compare__item Дополнительные занятия
+										span по желанию
+									li.text-compare__item Индивидуальный подход
+										span да
+									li.text-compare__item Гибкий график занятий
+										span да
+									li.text-compare__item Собрать ребенка в школу
+										span 0 рублей
+							.compare__image.compare__image_right
+								img(src="@img/compare/02.png", alt="compare boy 2")
 			include html/_footer 
 		//- include html/_popup 

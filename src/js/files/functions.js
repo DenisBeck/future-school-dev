@@ -221,14 +221,16 @@ export function spollers() {
 			if (spollerTitles.length) {
 				spollerTitles = Array.from(spollerTitles).filter(item => item.closest('[data-spollers]') === spollersBlock);
 				spollerTitles.forEach(spollerTitle => {
-					if (hideSpollerBody) {
-						spollerTitle.removeAttribute('tabindex');
-						if (!spollerTitle.classList.contains('_spoller-active')) {
-							spollerTitle.nextElementSibling.hidden = true;
+					if(spollerTitle.nextElementSibling) {
+						if (hideSpollerBody) {
+							spollerTitle.removeAttribute('tabindex');
+							if (!spollerTitle.classList.contains('_spoller-active')) {
+								spollerTitle.nextElementSibling.hidden = true;
+							}
+						} else {
+							spollerTitle.setAttribute('tabindex', '-1');
+							spollerTitle.nextElementSibling.hidden = false;
 						}
-					} else {
-						spollerTitle.setAttribute('tabindex', '-1');
-						spollerTitle.nextElementSibling.hidden = false;
 					}
 				});
 			}
@@ -243,9 +245,9 @@ export function spollers() {
 				if (!spollersBlock.querySelectorAll('._slide').length) {
 					if (oneSpoller && !spollerTitle.classList.contains('_spoller-active')) {
 						hideSpollersBody(spollersBlock);
+						spollerTitle.classList.toggle('_spoller-active');
+						_slideToggle(spollerTitle.nextElementSibling, spollerSpeed);
 					}
-					spollerTitle.classList.toggle('_spoller-active');
-					_slideToggle(spollerTitle.nextElementSibling, spollerSpeed);
 				}
 				e.preventDefault();
 			}

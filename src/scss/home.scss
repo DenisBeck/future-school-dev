@@ -452,10 +452,13 @@
             @include adaptiveValue("margin-bottom", 60, 30);
         }
     }
-    &__body {
-        display: flex;
-        gap: rem(30);
-    }
+    // &__body {
+    //     display: flex;
+    //     gap: rem(30);
+    //     @media(max-width: $tablet) {
+    //         flex-direction: column;
+    //     }
+    // }
     &__content {
         flex: 0 1 rem(517);
     }
@@ -471,13 +474,14 @@
             background: url('@img/why/arrow.png') center no-repeat;
         }
     }
-    
 }
 .tabs-why {
     &__navigation {
+        position: relative;
         &:not(:last-child) {margin-bottom: rem(15);}
     }
     &__title {
+        flex: 0 0 50%;
         padding: rem(13) rem(20);
         padding-left: rem(68);
         position: relative;
@@ -495,13 +499,13 @@
             height: rem(35);
             background: url('@img/why/item.png') center no-repeat;
         }
-        &:nth-child(2)::before {
+        .tabs-title:nth-child(2)>&::before {
             transform: translateY(-50%) rotate(-90deg)
         }
-        &:nth-child(3)::before {
+        .tabs-title:nth-child(3)>&::before {
             transform: translateY(-50%) rotate(-230deg)
         }
-        &._tab-active {
+        &._spoller-active {
             box-shadow: 5px 15px 40px rgba(30, 35, 66, 0.15);
             border-radius: 25px;
             background: $color1;
@@ -519,6 +523,13 @@
         flex: 1 0 auto;
     }
     &__body {
+        @media(max-width: $tablet) {
+            &.tabs-body {
+                @include adaptiveValue("width", 470, 280, 991.98, 320, 1);
+                max-width: 100%;
+                margin: 0 auto;
+            }
+        }
     }
 }
 .tabs-title {
@@ -533,20 +544,33 @@
         @include adaptiveValue("font-size", 15, 14);
         line-height: 130%;
     }
+    @media(min-width: $tablet) {
+        display: flex;
+        gap: rem(30);
+        align-items: flex-start;
+    }
 }
 .tabs-why {
     &__content {
+        @media(max-width: $pc) {
+            align-self: flex-end;
+        }
     }
     &__body {
         width: 100%;
-        height: 100%;
     }
 }
 .tabs-body {
     &__images {
         position: relative;
         width: 100%;
-        height: 80%;
+        @include adaptiveValue("height", 380, 208, $maxWidthContainer, 767.98, 1);
+        @media(min-width: $tablet) {
+            position: absolute;
+            top: 0;
+            right: 0;
+            width: calc(50% - 15px);
+        }
     }
     &__image {
         position: absolute;
@@ -555,6 +579,7 @@
             top: 0;
             left: 0;
             height: 100%;
+            animation: none !important;
         }
         &_tablet {
             width: 58.7%;
@@ -593,46 +618,170 @@
             top: 77.4%;
         }
         &_background2 {
+            width: 100%;
+            height: 100%;
+            top: 0;
+            left: 0;
+            animation: none !important;
         }
         &_atom {
+            width: 12%;
+            height: 12.3%;
+            top: 45.5%;
+            left: 24.3%;
         }
         &_flask {
+            width: 7.6%;
+            height: 12.1%;
+            left: 52.8%;
+            bottom: 5%;
         }
         &_kid1 {
+            width: 22.1%;
+            height: 47.1%;
+            top: 15.5%;
+            left: 8.3%;
         }
         &_kid2 {
+            width: 26%;
+            height: 37.9%;
+            top: 6.6%;
+            left: 31.2%;
         }
         &_kid3 {
+            width: 33.5%;
+            height: 50%;
+            top: 2%;
+            right: 7%;
         }
         &_kid4 {
+            width: 25.8%;
+            height: 27.9%;
+            bottom: 6.8%;
+            left: 8.1%;
         }
         &_kid5 {
+            width: 27.1%;
+            height: 40.8%;
+            bottom: 13.1%;
+            left: 36.9%;
         }
         &_kid6 {
+            width: 38.9%;
+            height: 40%;
+            bottom: 13.4%;
+            right: 0;
         }
         &_lamp {
+            width: 7.1%;
+            height: 15%;
+            bottom: 22.6%;
+            left: 0;
         }
         &_background3 {
+            width: 100%;
+            height: 100%;
+            top: 0;
+            left: 0;
+            animation: none !important;
         }
         &_kid8-1 {
+            width: 28%;
+            height: 32.6%;
+            top: 33.7%;
+            left: 39.4%;
         }
         &_kid7-1 {
+            width: 29.5%;
+            height: 30.8%;
+            left: 27.8%;
+            bottom: 9.5%;
         }
         &_kid1-1 {
+            width: 36.9%;
+            height: 42.6%;
+            left: 5.5%;
+            bottom: 12.6%;
         }
         &_kid2-1 {
+            width: 25.3%;
+            height: 38.7%;
+            top: 5.5%;
+            left: 10.1%;
         }
         &_kid3-1 {
+            width: 29.2%;
+            height: 40.5%;
+            top: -3.4%;
+            left: 39.4%;
         }
         &_kid4-1 {
+            width: 26.5%;
+            height: 31%;
+            top: 6%;
+            right: 8.4%;
         }
         &_kid5-1 {
+            width: 26.4%;
+            height: 38.1%;
+            top: 31.3%;
+            right: 0;
         }
         &_kid6-1 {
+            width: 35.2%;
+            height: 27.9%;
+            bottom: 9.5%;
+            right: 4.9%;
         }
         img {
             height: 100%;
         }
+        @media(any-hover) {
+            &:hover {
+                animation: 2.2s ease-in-out 0s normal none infinite running trambling-animation;
+            }
+        }
+    }
+    @media(min-width: $tablet) {
+        position: absolute;
+        top: 0;
+        right: 0;
     }
 }
+//====================================================================================================
+.page {
+    &__compare {
+    }
+}
+.compare {
+    &__container {
+    }
+    &__title {
+    }
+    &__body {
+    }
+    &__image {
+        &_left {
+        }
+        &_right {
+        }
+    }
+    &__text {
+        &_left {
+        }
+        &_right {
+        }
+    }
+}
+.title {
+}
+.text-compare {
+    &__title {
+    }
+    &__list {
+    }
+    &__item {
+    }
+}
+
 //====================================================================================================

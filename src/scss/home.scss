@@ -9,6 +9,9 @@
     &__compare {
         @include adaptiveValue("margin-bottom", 80, 50);
     }
+    &__what {
+        @include adaptiveValue("margin-bottom", 80, 60);
+    }
 }
 //====================================================================================================
 .main {
@@ -831,48 +834,54 @@
     }
 }
 //====================================================================================================
-.page {
-    &__what {
-    }
-}
 .what {
-    &__container {
-    }
     &__title {
+        max-width: rem(660);
+        width: 100%;
+        text-align: center;
+        margin: 0 auto;
+        &:not(:last-child) {
+            @include adaptiveValue("margin-bottom", 60, 30);
+        }
     }
     &__body {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        @include adaptiveValue("row-gap", 110, 30);
+        &:not(:last-child) {margin-bottom: rem(75);}
     }
     &__item {
+        flex: 0 1 calc(100% / 3);
+        display: flex;
+        flex-direction: column;
+        height: auto;
+        align-items: center;
+        text-align: center;
+        padding: 0 rem(35);
+        @media(max-width: $tablet) {
+            flex: 0 1 50%;
+        }
+        @media(max-width: $mobile) {
+            flex: 0 1 100%;
+        }
     }
     &__image {
+        @include adaptiveValue("height", 167, 100);
+        @include adaptiveValue("width", 167, 100);
+        &:not(:last-child) {margin-bottom: rem(20);}
     }
     &__label {
+        font-weight: 500;
+        font-size: rem(20);
+        line-height: 125%;
+        &:not(:last-child) {
+            @include adaptiveValue("margin-bottom", 14, 10);
+        }
     }
     &__text {
-    }
-}
-.title {
-}
-.whom {
-    &__price {
-    }
-}
-.price-whom {
-    &__image {
-    }
-    &__action {
-    }
-    &__order {
-    }
-    &__button {
-    }
-    &__social {
-    }
-}
-.action {
-    &__title {
-    }
-    &__text {
+        font-size: rem(15);
+        line-height: 157%;
     }
 }
 .main {

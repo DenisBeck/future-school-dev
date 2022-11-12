@@ -27,5 +27,5 @@
 .title {
     font-family: "ALSSchlangesans";
     line-height: 103%;
-    @include adaptiveValue("font-size", 50, 20);
+    @include adaptiveValue("font-size", 50, 28);
 }

@@ -6,7 +6,10 @@
     &__whom,
     &__how,
     &__why,
-    &__compare {
+    &__compare,
+    &__cost,
+    &__document,
+    &__reviews {
         @include adaptiveValue("margin-bottom", 80, 50);
     }
     &__what {
@@ -884,27 +887,296 @@
         line-height: 157%;
     }
 }
-.main {
-    &__button {
+//====================================================================================================
+.cost {
+    background: #EFF2FD;
+    @include adaptiveValue("padding-top", 60, 30);
+    @include adaptiveValue("padding-bottom", 100, 40);
+    &__title {
+        text-align: center;
+        &:not(:last-child) {
+            @include adaptiveValue("margin-bottom", 55, 30);
+        }
     }
-    &__social {
-    }
-}
-.button {
-}
-.social {
-    &__text {
-    }
-    &__list {
+    &__body {
+        display: flex;
+        justify-content: space-between;
+        @media(max-width: $pc) {
+            flex-wrap: wrap;
+            row-gap: rem(40);
+        }
+        @media(max-width: $mobile) {
+            max-width: 100%;
+            justify-content: center;
+        }
     }
     &__item {
-    }
-    &__link {
-        &_telegram {
+        position: relative;
+        &_action {
+            .item-price {
+                justify-content: flex-end;
+            }
+            .item-price__action {
+                @media(min-width: $pc) {
+                    opacity: 1;
+                    visibility: visible;
+                }
+            }
         }
-        &_whatsapp {
+        @media(max-width: $pc) {
+            &:last-child:not(:nth-child(even)) {
+                margin: 0 auto;
+            }
         }
     }
 }
-
+.cost-item {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    flex: 0 0 rem(300);
+    &__price {
+        margin-bottom: rem(-35);
+        position: relative;
+        z-index: 2;
+    }
+    &__content {
+        @include adaptiveValue("padding-top", 50, 40);
+        @include adaptiveValue("padding-left", 35, 20);
+        @include adaptiveValue("padding-right", 35, 20);
+        @include adaptiveValue("padding-bottom", 29, 26);
+        margin-right: rem(50);
+    }
+    &__image {
+        position: absolute;
+        bottom: 0;
+        right: rem(20);
+        z-index: 3;
+        @media(max-width: $mobile) {
+            width: 28%;
+            right: 0;
+        }
+    }
+    @media(max-width: $mobile) {
+        max-width: 100%;
+    }
+}
+.item-price {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    &__main {
+        width: rem(250);
+        flex: 0 0 rem(250);
+        height: rem(100);
+        border-radius: rem(25);
+        margin-left: rem(30);
+        margin-right: rem(-30);
+        span {
+            font-size: rem(26);
+            font-weight: 500;
+            line-height: 141%;
+            white-space: nowrap;
+        }
+        &::after {
+            content: "/мес";
+            font-family: "gothampro";
+            align-self: flex-end;
+            font-size: rem(14);
+            color: #E9E8FA;
+        }
+        @media(max-width: $tablet) {
+            width: rem(220);
+            flex: 0 0 rem(220);
+            min-height: rem(80);
+        }
+        @media(max-width: $mobileSmall) {
+            width: rem(210);
+            flex: 0 0 rem(210);
+            min-height: rem(77);
+        }
+    }
+    &__action {
+        opacity: 0;
+        visibility: hidden;
+        @include adaptiveValue("width", 130, 100);
+        @include adaptiveValue("height", 130, 100);
+        background: url('@img/cost/action.png') center no-repeat;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        transform: rotate(30deg);
+        text-align: center;
+        flex-direction: column;
+        padding: rem(10);
+        span {
+            text-transform: uppercase;
+            color: #F0F0F0;
+            font-family: "ALSSchlangesans";
+            line-height: 141%;
+            &:first-child {
+                color: #C6C6C6
+            }
+        }
+    }
+}
+.item-content {
+    background: #FFFFFF;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 25px 25px 0px 50px;
+    width: rem(295);
+    flex: 1 0 auto;
+    &__label {
+        font-weight: 500;
+        font-size: rem(20);
+        line-height: 103%;
+        &:not(:last-child) {margin-bottom: rem(10);}
+    }
+    &__description {
+        font-size: rem(16);
+        line-height: 103%;
+        &:not(:last-child) {margin-bottom: rem(20);}
+        background: linear-gradient(26.5deg, #4271DF 16.72%, #789CF1 95.45%);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+        text-fill-color: transparent;
+    }
+    &__list {
+        @include adaptiveValue("padding-right", 10, 30);
+        &:not(:last-child) {margin-bottom: rem(20);}
+    }
+    &__item {
+        display: flex;
+        gap: rem(8);
+        align-items: center;
+        &:not(:last-child) {margin-bottom: rem(20);}
+        &::before {
+            content: "";
+            width: rem(24);
+            height: rem(24);
+            background: url('@img/cost/check.png') center no-repeat;
+        }
+    }
+    &__button {
+        background: linear-gradient(26.5deg, #4271DF 16.72%, #789CF1 95.45%);
+        box-shadow: 0px 4px 20px #648CEB;
+        border-radius: 50px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        min-width: rem(160);
+        min-height: rem(32);
+        transform: scale(1);
+        transition: all 0.3s ease 0s;
+        @media(any-hover) {
+            &:hover {
+                transform: scale(1.1);
+            }
+        }
+        span {
+            background: linear-gradient(180deg, #FFFFFF 0%, #EBF8F8 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            text-fill-color: transparent;
+            font-size: rem(12);
+            line-height: 100%;
+        }
+    }
+}
+//====================================================================================================
+.document {
+    &__container {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        height: auto;
+        @media(max-width: $mobile) {
+            flex-direction: column;
+            row-gap: rem(30);
+        }
+    }
+    &__content,
+    &__image {
+        flex: 0 0 50%;
+        @media(max-width: $mobile) {
+            flex: 1 1 auto;
+        }
+    }
+    &__content {
+        @media(max-width: $mobile) {
+            text-align: center;
+        }
+    }
+    &__title {
+        &:not(:last-child) {margin-bottom: rem(30);}
+    }
+    &__text {
+        line-height: 103%;
+        @include adaptiveValue("font-size", 20, 16);
+        max-width: rem(500);
+        @media(max-width: $mobile) {
+            margin: 0 auto;
+        }
+    }
+}
+//====================================================================================================
+.reviews {
+    &__title {
+        text-align: center;
+        &:not(:last-child) {
+            @include adaptiveValue("margin-bottom", 60, 30);
+        }
+    }
+    &__body {
+        @include adaptiveValue("min-height", 550, 256);
+        display: flex;
+        align-items: center;
+        background: url('@img/reviews/background.png') right center / contain no-repeat;
+    }
+    &__slider {
+        @media(min-width: $mobile) {
+            overflow: inherit !important;
+        }
+    }
+    &__slide {
+        @include adaptiveValue("padding-top", 38, 20);
+        @include adaptiveValue("padding-bottom", 38, 20);
+        @include adaptiveValue("padding-left", 30, 20);
+        @include adaptiveValue("padding-right", 30, 20);
+    }
+    &__navigation {
+    }
+    &__button {
+        &_prev {
+        }
+        &_next {
+        }
+    }
+}
+.slide-item {
+    background: #FFFFFF;
+    border: 5px solid #4C75A3;
+    box-shadow: 14px 22px 40px rgba(30, 35, 66, 0.28);
+    border-radius: 20px;
+    max-width: rem(617);
+    width: 100%;
+    &__info {
+    }
+    &__source {
+    }
+    &__name {
+    }
+    &__status {
+    }
+    &__link {
+    }
+    &__text {
+    }
+}
+.swiper-button-prev {
+}
+.swiper-button-next {
+}
 //====================================================================================================

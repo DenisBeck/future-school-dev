@@ -288,67 +288,128 @@ html(lang="en")
 						.cost__title.title Сколько стоит обучение в онлайн школе?
 						.cost__body 
 							.cost__item.cost-item
-								.cost-item__price 
-									span 10 500
-								.cost-item__label 
-								.cost-item__description 
-								ul.cost-item__list 
-									li.cost-item__item 
-										span 
-									li.cost-item__item 
-										span 
-									li.cost-item__item 
-										span 
-									li.cost-item__item 
-										span 
-									li.cost-item__item 
-										span 
-									li.cost-item__item 
-										span 
-								button.cost-item__button 
+								.cost-item__price.item-price 
+									.item-price__main.button
+										span 10 500 ₽
+									.item-price__action 
+										span НАЧАЛО ЗАНЯТИЙ 
+										span 1 СЕНТЯБРЯ!
+								.cost-item__content.item-content
+									.item-content__label 1-4 класс
+									.item-content__description Веселые и увлекательные уроки
+									ul.item-content__list 
+										li.item-content__item 
+											span 2-3 урока в день пн-чт
+										li.item-content__item 
+											span 10-12 учеников в классе
+										li.item-content__item 
+											span внимание к каждому ребенку
+										li.item-content__item 
+											span интерактивные тренажеры
+										li.item-content__item 
+											span игровая форма обучения
+										li.item-content__item 
+											span зачисление в школу партнер 12 000/год
+									button.item-content__button 
+										span Подробнее
 								.cost-item__image 
 									img(src="@img/cost/01.png", alt="cost 1")
-							.cost__item.cost-item
-								.cost-item__price 
-									span 10 500
-								.cost-item__label 
-								.cost-item__description 
-								ul.cost-item__list 
-									li.cost-item__item 
-										span 
-									li.cost-item__item 
-										span 
-									li.cost-item__item 
-										span 
-									li.cost-item__item 
-										span 
-									li.cost-item__item 
-										span 
-									li.cost-item__item 
-										span 
-								button.cost-item__button 
+							.cost__item.cost-item.cost__item_action
+								.cost-item__price.item-price 
+									.item-price__main.button
+										span 12 500 ₽
+									.item-price__action 
+										span НАЧАЛО ЗАНЯТИЙ 
+										span 1 СЕНТЯБРЯ!
+								.cost-item__content.item-content
+									.item-content__label 5-8 класс
+									.item-content__description Помогаем не потерять интерес
+									ul.item-content__list 
+										li.item-content__item 
+											span 3-5 уроков в день пн-пт
+										li.item-content__item 
+											span 12-15 учеников в классе
+										li.item-content__item 
+											span внимание к каждому ребенку
+										li.item-content__item 
+											span интерактивные тренажеры
+										li.item-content__item 
+											span усиленная подготовка к ОГЭ
+										li.item-content__item 
+											span зачисление в школу партнер 12 000/год
+									button.item-content__button 
+										span Подробнее
 								.cost-item__image 
-									img(src="@img/cost/01.png", alt="cost 1")
-							.cost__item.cost-item
-								.cost-item__price 
-									span 10 500
-								.cost-item__label 
-								.cost-item__description 
-								ul.cost-item__list 
-									li.cost-item__item 
-										span 
-									li.cost-item__item 
-										span 
-									li.cost-item__item 
-										span 
-									li.cost-item__item 
-										span интерактивные тренажеры
-									li.cost-item__item 
-										span игровая форма обучения
-									li.cost-item__item 
-										span зачисление в школу партнер 12 000/год
-								button.cost-item__button Подробнее
+									img(src="@img/cost/02.png", alt="cost 2")
+							.cost__item.cost-item.cost__item_action
+								.cost-item__price.item-price 
+									.item-price__main.button
+										span 16 500 ₽
+									.item-price__action 
+										span НАЧАЛО ЗАНЯТИЙ 
+										span 1 СЕНТЯБРЯ!
+								.cost-item__content.item-content
+									.item-content__label 9-11 класс
+									.item-content__description Самый важный этап в жизни
+									ul.item-content__list 
+										li.item-content__item 
+											span 4-5 уроков в день пн-пт
+										li.item-content__item 
+											span 12-15 учеников в классе
+										li.item-content__item 
+											span внимание к каждому ребенку
+										li.item-content__item 
+											span интерактивные тренажеры
+										li.item-content__item 
+											span усиленная подготовка к ОГЭ и ЕГЭ
+										li.item-content__item 
+											span зачисление в школу партнер 12 000/год
+									button.item-content__button 
+										span Подробнее
 								.cost-item__image 
 									img(src="@img/cost/03.png", alt="cost 3")
+				section.page__document.document 
+					.document__container 
+						.document__content 
+							.document__title.title Аттестат государственного образца
+							.document__text Вы получите аттестат государственного образца. Он ничем не отличается от аттестата которые выдают в обычных школах.С аттестатом вы сможете продолжить обучение в лучших вузах страны. 
+						.document__image 
+							img(src="@img/document/01.png", alt="document 1")
+				section.page__reviews.reviews 
+					.reviews__container 
+						.reviews__title.title Отзывы родителей о "Школе Будущего Online"
+						.reviews__body
+							.reviews__slider.swiper 
+								.reviews__wrapper.swiper-wrapper 
+									.reviews__slide.swiper-slide.slide-item 
+										.slide-item__info 
+											.slide-item__source 
+												img(src="@img/footer/vk.png", alt="review vk")
+											.slide-item__name Анна Смирнова 
+											.slide-item__status родитель Максима 
+											a(href="#").slide-item__link vk.com/annaaa 
+										.slide-item__text 
+											p Банальные, но неопровержимые выводы, а также непосредственные участники технического прогресса набирают популярность среди определенных слоев населения, а значит, должны быть ассоциативно распределены по отраслям. Имеется спорная точка зрения, гласящая примерно следующее: диаграммы.
+									.reviews__slide.swiper-slide.slide-item 
+										.slide-item__info 
+											.slide-item__source 
+												img(src="@img/footer/vk.png", alt="review vk")
+											.slide-item__name Анна Смирнова 
+											.slide-item__status родитель Максима 
+											a(href="#").slide-item__link vk.com/annaaa 
+										.slide-item__text 
+											p Банальные, но неопровержимые выводы, а также непосредственные участники технического прогресса набирают популярность среди определенных слоев населения, а значит, должны быть ассоциативно распределены по отраслям. Имеется спорная точка зрения, гласящая примерно следующее: диаграммы.
+									.reviews__slide.swiper-slide.slide-item.reviews__slide_instagram 
+										.slide-item__info 
+											.slide-item__source 
+												img(src="@img/reviews/instagram.png", alt="review instagram")
+											.slide-item__name Анна Смирнова 
+											.slide-item__status родитель Максима 
+											a(href="#").slide-item__link vk.com/annaaa 
+										.slide-item__text 
+											p Банальные, но неопровержимые выводы, а также непосредственные участники технического прогресса набирают популярность среди определенных слоев населения, а значит, должны быть ассоциативно распределены по отраслям. Имеется спорная точка зрения, гласящая примерно следующее: диаграммы.
+								.reviews__navigation 
+									.reviews__button.reviews__button_prev.swiper-button-prev
+									.reviews__button.reviews__button_next.swiper-button-next
 			include html/_footer 
 		//- include html/_popup 

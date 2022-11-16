@@ -245,6 +245,12 @@ export function spollers() {
 				if (!spollersBlock.querySelectorAll('._slide').length) {
 					if (oneSpoller && !spollerTitle.classList.contains('_spoller-active')) {
 						hideSpollersBody(spollersBlock);
+						if(!spollerTitle.classList.contains('faq__title')) {
+							spollerTitle.classList.toggle('_spoller-active');
+							_slideToggle(spollerTitle.nextElementSibling, spollerSpeed);
+						}
+					}
+					if(spollerTitle.classList.contains('faq__title')) {
 						spollerTitle.classList.toggle('_spoller-active');
 						_slideToggle(spollerTitle.nextElementSibling, spollerSpeed);
 					}

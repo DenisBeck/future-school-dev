@@ -9,7 +9,8 @@
     &__compare,
     &__cost,
     &__document,
-    &__reviews {
+    &__reviews,
+    &__faq {
         @include adaptiveValue("margin-bottom", 80, 50);
     }
     &__what {
@@ -1129,15 +1130,16 @@
             @include adaptiveValue("margin-bottom", 60, 30);
         }
     }
-    &__body {
-        @include adaptiveValue("min-height", 550, 256);
+    &__slider {
         display: flex;
         align-items: center;
         background: url('@img/reviews/background.png') right center / contain no-repeat;
-    }
-    &__slider {
+        @include adaptiveValue("min-height", 550, 256);
         @media(min-width: $mobile) {
             overflow: inherit !important;
+        }
+        &:not(:last-child) {
+            @include adaptiveValue("margin-bottom", 60, 30);
         }
     }
     &__slide {
@@ -1145,13 +1147,37 @@
         @include adaptiveValue("padding-bottom", 38, 20);
         @include adaptiveValue("padding-left", 30, 20);
         @include adaptiveValue("padding-right", 30, 20);
+        &_instagram {
+            position: relative;
+            border: none !important;
+            &::before {
+                content: "";
+                position: absolute;
+                z-index: -1;
+                top: -5px;
+                left: -5px;
+                width: calc(100% + 10px);
+                height: calc(100% + 10px);
+                border-radius: 20px;
+                background: linear-gradient(30deg, #FFD521 0%,#FFD020 7%, #FEC01E 15%, #FCA71B 22%, #FA8316 29%, #F85510 36%, #F51E09 44%, #F30005 51%, #F20007 58%, #E1003B 65%, #D30067 72%, #C70088 79%, #BF00A0 86%, #BB00AF 93%, #B900B4 100%); 
+            }
+        }
     }
     &__navigation {
+        display: flex;
+        justify-content: center;
+        gap: rem(30);
+
     }
     &__button {
-        &_prev {
-        }
+        @include adaptiveValue("width", 69, 50);
+        @include adaptiveValue("height", 69, 50);
+        cursor: pointer;
+        background: url('@img/reviews/arrow.png') center no-repeat;
+        border-radius: 50%;
+        border: 1px solid #789CF1;
         &_next {
+            transform: rotate(180deg);
         }
     }
 }
@@ -1162,21 +1188,97 @@
     border-radius: 20px;
     max-width: rem(617);
     width: 100%;
+    display: flex;
+    justify-content: space-between;
+    column-gap: rem(10);
     &__info {
+        flex: 0 0 35%;
+        @media(max-width: $mobileMedium) {
+            flex: 0 0 auto;
+            display: flex;
+            column-gap: rem(20);
+        }
     }
     &__source {
+        @include adaptiveValue("width", 40, 30);
+        @include adaptiveValue("height", 40, 30);
+        &:not(:last-child) {
+            @include adaptiveValue("margin-bottom", 29, 18, $maxWidthContainer, 767.98, 1);
+        }
+    }
+    &__desc {
+
     }
     &__name {
+        font-family: "ALSSchlangesans";
+        @include adaptiveValue("font-size", 26, 20);
+        line-height: 100%;
+        &:not(:last-child) {
+            @include adaptiveValue("margin-bottom", 10, 5);
+        }
     }
     &__status {
+        @include adaptiveValue("font-size", 18, 14);
+        line-height: 100%;
+        &:not(:last-child) {
+            @include adaptiveValue("margin-bottom", 18, 5);
+        }
+        
     }
     &__link {
+        @include adaptiveValue("font-size", 16, 14);
+        line-height: 130%;
+        font-weight: 500;
+        background: linear-gradient(26.5deg, #4271DF 16.72%, #789CF1 95.45%);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+        text-fill-color: transparent;
+        @media(any-hover) {
+            &:hover {
+                text-decoration: underline;
+            }
+        }
+    }
+    &__text {
+        @include adaptiveValue("font-size", 16, 12);
+        line-height: 150%;
+    }
+    @media(max-width: $mobileMedium) {
+        flex-direction: column;
+        row-gap: rem(20)
+    }
+}
+//====================================================================================================
+.page {
+    &__action-free {
+    }
+}
+.action-free {
+    &__container {
+    }
+    &__form-block {
+    }
+    &__form {
+    }
+    &__content {
+    }
+    &__title {
     }
     &__text {
     }
+    &__image {
+    }
 }
-.swiper-button-prev {
+.form {
+    &__text {
+    }
 }
-.swiper-button-next {
+.input {
 }
+.submit {
+}
+.title {
+}
+
 //====================================================================================================

@@ -39,7 +39,6 @@ function initSliders() {
         	centeredSlides: true,
 			slidesPerGroup: 1,
 			spaceBetween: 50,
-			autoHeight: true,
 			speed: 800,
 
 			//touchRatio: 0,

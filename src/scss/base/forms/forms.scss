@@ -1,17 +1,53 @@
 //<FORM>
 // Снипет (HTML):
 .form {
-	&__row {
-	}
-	&__column {
-	}
-	&__line {
-	}
+	display: flex;
+	flex-direction: column;
+	// &__row {
+	// }
+	// &__column {
+	// }
+	// &__line {
+	// }
 	&__input {
+		border-radius: rem(32);
+		background: #F8F8F8;
+		width: 100%;
+		padding: 0 rem(15);
+		@include adaptiveValue("height", 56, 40);
+		display: flex;
+		@include adaptiveValue("gap", 24, 20);
+		align-items: center;
+		border: 1px solid #E0E0E0;
+		transition: all 0.3s ease 0s;
+		&:not(:last-child) {margin-bottom: rem(20);}
+		&._form-focus {
+            box-shadow: 5px 5px 10px rgba($mainColor, 0.15);
+        }
+		&::before {
+			content: "";
+			@include adaptiveValue("width", 24, 20);
+			@include adaptiveValue("height", 24, 20);
+			@include adaptiveValue("flex-basis", 24, 20);
+		}
+		&_class::before {
+			background: url('@img/action-free/form-class.png') center no-repeat;
+		}
+		&_name::before {
+			background: url('@img/action-free/form-name.png') center no-repeat;
+		}
+		&_phone::before {
+			background: url('@img/action-free/form-phone.png') center no-repeat;
+		}
 	}
-	&__button {
-	}
-	&__error {
+	// &__button {
+	// }
+	// &__error {
+	// }
+	&__text {
+		font-size: rem(12);
+		line-height: calc(16 / 12);
+		color: #9E9E9E;
 	}
 }
 //</FORM>
@@ -22,7 +58,7 @@
 
 // <INPUTS>
 // Снипет (HTML): inp
-// @import "input";
+@import "input";
 
 // <CHECK>
 // Снипет (HTML): chk

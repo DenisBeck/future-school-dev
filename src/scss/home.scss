@@ -10,7 +10,8 @@
     &__cost,
     &__document,
     &__reviews,
-    &__faq {
+    &__faq,
+    &__action-free {
         @include adaptiveValue("margin-bottom", 80, 50);
     }
     &__what {
@@ -1147,9 +1148,13 @@
         @include adaptiveValue("padding-bottom", 38, 20);
         @include adaptiveValue("padding-left", 30, 20);
         @include adaptiveValue("padding-right", 30, 20);
-        &_instagram {
+        &_instagram.slide-item {
             position: relative;
-            border: none !important;
+            top: 5px;
+            max-width: rem(607);
+            width: calc(100% - 10px);
+            height: calc(100% - 10px);
+            border: none;
             &::before {
                 content: "";
                 position: absolute;
@@ -1206,9 +1211,6 @@
             @include adaptiveValue("margin-bottom", 29, 18, $maxWidthContainer, 767.98, 1);
         }
     }
-    &__desc {
-
-    }
     &__name {
         font-family: "ALSSchlangesans";
         @include adaptiveValue("font-size", 26, 20);
@@ -1250,35 +1252,95 @@
     }
 }
 //====================================================================================================
-.page {
-    &__action-free {
-    }
-}
 .action-free {
     &__container {
+        display: flex;
+        justify-content: space-between;
+        gap: rem(30);
+        @media(max-width: $tablet) {
+            display: block;
+        }
     }
     &__form-block {
+        flex: 0 0 rem(465);
+        position: relative;
+        background: url('@img/action-free/bg-form.png') no-repeat;
+        @media(max-width: $tablet) {
+            width: 100%;
+            flex: 0 0 auto;
+            margin-bottom: rem(20);
+        }
+        @media(max-width: $mobile) {
+            background: none;
+        }
     }
     &__form {
+        width: 75%;
+        position: absolute;
+        top: 18.5%;
+        right: 0;
+        background: #eee;
+        box-shadow: 5px 15px 40px rgba(30, 35, 66, 0.15);
+        border-radius: 15px;
+        padding: rem(35) rem(26);
+        @media(max-width: $tablet) {
+            position: static;
+            @include adaptiveValue("width", 350, 280, 991.98, 320, 1);
+            margin: rem(100) auto;
+        }
+        @media(max-width: $mobile) {
+            margin: 0 auto rem(20);
+        }
     }
     &__content {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+        @media(max-width: $tablet) {
+            align-items: center;
+        }
+    }
+    &__body {
+        max-width: rem(520);
+        &:not(:last-child) {margin-bottom: rem(35);}
     }
     &__title {
+        &:not(:last-child) {margin-bottom: rem(10);}
+        span {
+            color: #4271DF;
+        }
+        @media(max-width: $tablet) {
+            text-align: center;
+        }
     }
     &__text {
+        line-height: 103%;
+        @include adaptiveValue("font-size", 20, 14);
+        @media(max-width: $tablet) {
+            text-align: center;
+        }
     }
     &__image {
+        img {
+            height: 100%;
+        }
     }
-}
-.form {
-    &__text {
-    }
-}
-.input {
 }
 .submit {
-}
-.title {
+    align-self: center;
+    background: linear-gradient(26.5deg, #4271DF 16.72%, #789CF1 95.45%);
+    border-radius: 32px;
+    margin-top: rem(10);
+    &:not(:last-child) {margin-bottom: rem(20);}
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: $color1;
+    font-size: rem(10);
+    line-height: 118%;
+    font-weight: 700;
+    padding: rem(22) rem(35);
+    max-width: 100%;
+    cursor: pointer;
 }
 
 //====================================================================================================

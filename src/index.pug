@@ -548,17 +548,21 @@ html(lang="en")
 									p Наша российская онлайн школа поможет сделать семейное обучение эффективным за счет дополнительных учебных материалов, кураторства и помощи учителей. Чтобы узнать, подходит ли такой формат обучения, всегда можно пройти недельный бесплатный курс.
 				section.page__action-free.action-free 
 					.action-free__container 
-						.action-free__form-block 
+						.action-free__form-block(data-da=".action-free__content,991.98,1") 
 							form(action="#").action-free__form.form
-								input(autocomplete="off", type="text", name="form[]", data-error="Ошибка", placeholder="Класс").input 
-								input(autocomplete="off", type="text", name="form[]", data-error="Ошибка", placeholder="Имя родителя").input
-								input(autocomplete="off", type="tel", name="form[]", data-error="Ошибка", placeholder="Телефон родителя").input
+								.form__input.form__input_class
+									input(autocomplete="off", type="text", name="form[]", data-error="Ошибка", placeholder="Класс").input 
+								.form__input.form__input_name
+									input(autocomplete="off", type="text", name="form[]", data-error="Ошибка", placeholder="Имя родителя").input
+								.form__input.form__input_phone
+									input(autocomplete="off", type="tel", name="form[]", data-error="Ошибка", placeholder="Телефон родителя").input
 								input(autocomplete="off", type="submit", name="form[]", data-error="Ошибка", value="Оставить заявку").submit
 								.form__text Нажимая кнопку, вы даете согласие на обработку своих персональных данных
 						.action-free__content 
-							.action-free__title.title Все еще 
-								span сомневаетесь?
-							.action-free__text Всегда страшно переходить на что-то новое и неизведанное, потому мы предоставляем нашим клиентам возможность попробовать обучаться первую неделю абсолютно бесплатно.
+							.action-free__body
+								.action-free__title.title Все еще 
+									span сомневаетесь?
+								.action-free__text Всегда страшно переходить на что-то новое и неизведанное, потому мы предоставляем нашим клиентам возможность попробовать обучаться первую неделю абсолютно бесплатно.
 							.action-free__image 
 								img(src="@img/action-free/01.png", alt="action-free 1")
 			include html/_footer 
